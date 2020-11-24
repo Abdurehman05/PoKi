@@ -16,9 +16,27 @@
 --  LEFT JOIN Grade g ON g.Id = a.GradeId 
 --  WHERE a.Id BETWEEN 1 AND 76
 --  ORDER BY a.Name
-SELECT a.Name, g.Name, gn.Name
-FROM Author a
-LEFT JOIN Grade g ON g.Id = a.GradeId 
-LEFT JOIN Gender gn ON gn.Id = a.GenderId
-WHERE a.Id BETWEEN 1 AND 76
-ORDER BY a.Name
+--6)SELECT a.Name, g.Name, gn.Name
+--  FROM Author a
+--  LEFT JOIN Grade g ON g.Id = a.GradeId 
+--  LEFT JOIN Gender gn ON gn.Id = a.GenderId
+--  WHERE a.Id BETWEEN 1 AND 76
+--  ORDER BY a.Name
+--7)SELECT SUM(WordCount) AS 'Total Number of Words'
+--  FROM Poem
+--8)SELECT Title, CharCount
+--	FROM Poem
+--	WHERE CharCount = (SELECT MIN(CharCount) FROM Poem)
+--9)SELECT COUNT(a.Id) AS 'Number of Authors in 3rd Grade'
+--FROM Author a
+--LEFT JOIN Grade g ON a.GradeId = g.Id
+--WHERE g.Name = '3rd Grade'
+--10)SELECT COUNT(a.Id) AS 'Number of Authors in 1st,2nd or 3rd Grade'
+--	 FROM Author a
+--   LEFT JOIN Grade g ON a.GradeId = g.Id
+--	 WHERE g.Name = '3rd Grade' OR g.Name = '1st Grade' OR g.Name = '2nd Grade'
+--11)SELECT COUNT(p.Id) AS 'Total Number of Poems by 4th Graders'
+--	 FROM Poem p
+--	 LEFT JOIN Author a ON a.Id = p.AuthorId
+--   LEFT JOIN Grade g ON g.Id = a.GradeId
+--   WHERE g.Name = '4th Grade'
