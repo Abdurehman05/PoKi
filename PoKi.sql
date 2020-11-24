@@ -5,3 +5,5 @@
 --  LEFT JOIN PoemEmotion pe ON pe.PoemId = p.Id
 --  LEFT JOIN Emotion e ON e.Id = pe.EmotionId
 --  GROUP BY e.Id,e.Name
+--3)Select COUNT(Id) AS 'Number of Poems'
+--  FROM Poem 
