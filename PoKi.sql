@@ -7,3 +7,7 @@
 --  GROUP BY e.Id,e.Name
 --3)Select COUNT(Id) AS 'Number of Poems'
 --  FROM Poem 
+SELECT Name
+FROM Author 
+WHERE Id BETWEEN 1 AND 76
+ORDER BY Name
